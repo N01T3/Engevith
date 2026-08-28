@@ -1,4 +1,5 @@
 import HeroSection from '@modules/site/home/components/HeroSection.vue'
+import { vReveal } from '@shared/directives/reveal'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
 import { createMemoryHistory, createRouter } from 'vue-router'
@@ -19,6 +20,9 @@ describe('HeroSection', () => {
     const wrapper = mount(HeroSection, {
       global: {
         plugins: [vuetify, router],
+        directives: {
+          reveal: vReveal,
+        },
       },
     })
 
