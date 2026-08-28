@@ -1,0 +1,107 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f6f8;
+  color: #1a1c20;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-pre-line {
+  white-space: pre-line;
+}
+
+/* Texto legível sobre fundos escuros (navy) — substitui "text-white + text-medium-emphasis" */
+.text-on-dark {
+  color: #c9d4e0;
+}
+
+.text-on-dark-muted {
+  color: #9fb0bf;
+}
+
+/* Linha de destaque técnica (accent) usada em hero/seções */
+.engevith-accent-rule {
+  height: 4px;
+  width: 72px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #006b5d 0%, #00a88f 100%);
+}
+
+.engevith-accent-rule--animated {
+  background: linear-gradient(90deg, #006b5d, #00a88f, #006b5d);
+  background-size: 200% 100%;
+  animation: accent-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes accent-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Transição de rota */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Hover de cards */
+.card-hover {
+  transition:
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgb(11 36 55 / 14%);
+}

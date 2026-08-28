@@ -1,0 +1,18 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-recommended-vue"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "order/properties-alphabetical-order": null,
+    "order/order": ["custom-properties", "declarations"],
+    "selector-class-pattern": null,
+    "scss/at-rule-no-unknown": null,
+    "no-descending-specificity": null,
+    "declaration-no-important": [true, { "severity": "warning" }]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.vue"],
+      "customSyntax": "postcss-html"
+    }
+  ]
+}

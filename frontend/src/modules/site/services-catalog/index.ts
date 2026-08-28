@@ -1,0 +1,7 @@
+export { default as ServicesList } from './views/ServicesList.vue'
+export { default as CategoryDetail } from './views/CategoryDetail.vue'
+export { default as CategoryCard } from './components/CategoryCard.vue'
+export { default as CategoryItem } from './components/CategoryItem.vue'
+export { useServiceCatalogStore } from './stores/service-catalog.store'
+export { serviceCatalogService } from './data/service-catalog.service'
+export type { Service, ServiceCategory } from './types/service.types'

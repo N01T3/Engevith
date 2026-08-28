@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+MSG_FILE="$1"
+cd frontend && npx --no -- commitlint --edit "$MSG_FILE"

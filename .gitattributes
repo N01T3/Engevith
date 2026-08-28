@@ -1,0 +1,16 @@
+* text=auto eol=lf
+
+# Shell scripts (git hooks) devem ser sempre LF — CRLF quebra o shebang
+*.sh text eol=lf
+.husky/** text eol=lf
+
+# Binários explícitos
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
